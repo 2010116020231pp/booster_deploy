@@ -112,3 +112,8 @@ Key modules:
    ├─ models/            # optional policy checkpoints
    └─ motions/           # optional motion primitives or recordings
    ```
+## 注意
+- booster_train训练完成后log目录中exported的pt文件需要在deploy中被用到
+- 若是locomotion，则复制对应文件夹，并修改__init__.py文件，完成动作任务的注册
+- 若是beyondmimic，则还需提供motions数据，即csv转成npz的文件，然后同样修改__init_.py文件
+- locomotion和beyondmimic所使用的模型不一样，若不确定用的是哪一个，可以来回实验确定。

@@ -117,3 +117,17 @@ Key modules:
 - 若是locomotion，则复制locomotion文件夹，重命名，并修改__init__.py文件，完成动作任务的注册
 - 若是beyondmimic，则则复制beyondmimic文件夹，重命名，然后还需提供motions数据，即csv转成npz的文件，最后同样修改__init_.py文件
 - locomotion和beyondmimic所使用的模型不一样，若不确定用的是哪一个，可以来回实验确定。
+
+## 使用指南
+ ```bash
+python ./scripts/deploy.py --list
+Available tasks:
+  k1_mj2	:	tasks.beyond_mimic.K1MJ2ControllerCfg
+  k1_fight	:	tasks.beyond_mimic.K1FightControllerCfg
+  k1_fight_002	:	tasks.beyond_mimic2.K1MJ2ControllerCfg
+  t1_walk	:	tasks.locomotion.T1WalkControllerCfg1
+  k1_fight_001_2026-05-07_13-50-39	:	tasks.locomotion2.T1WalkControllerCfg1
+ ```
+ ```bash
+ python ./scripts/deploy.py --task k1_fight_002 --mujoco
+ ```
